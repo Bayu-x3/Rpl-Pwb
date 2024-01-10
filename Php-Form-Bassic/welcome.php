@@ -10,12 +10,12 @@
   <div class="container d-flex justify-content-center align-items-center vh-100">
     <div class="card p-4">
       <?php
-        $first_name = $_POST['first'] ?? "Tidak teridentifikasi";
-        $last_name = $_POST['last'] ?? "Tidak teridentifikasi";
+        $first_name = $_POST['first'];
+        $last_name = $_POST['last'];
         $gender = $_POST['gender'] ?? "Tidak teridentifikasi";
-        $country = $_POST['country'] ?? "Tidak teridentifikasi";
+        $country = $_POST['country'];
         $languages = $_POST['language'] ?? "Tidak teridentifikasi";
-        $bio = $_POST['bio'] ?? "Tidak teridentifikasi";
+        $bio = $_POST['bio'];
 
         function displayValue($value) {
           return $value !== "Tidak teridentifikasi" ? $value : "<em>Tidak teridentifikasi</em>";
