@@ -12,22 +12,18 @@
       <?php
         $first_name = $_POST['first'];
         $last_name = $_POST['last'];
-        $gender = $_POST['gender'] ?? "Tidak teridentifikasi";
+        $gender = $_POST['gender'];
         $country = $_POST['country'];
-        $languages = $_POST['language'] ?? "Tidak teridentifikasi";
+        $languages = $_POST['language'];
         $bio = $_POST['bio'];
 
-        function displayValue($value) {
-          return $value !== "Tidak teridentifikasi" ? $value : "<em>Tidak teridentifikasi</em>";
-        }
-
-        echo "<h1 class='text-center'>Welcome " . displayValue($first_name) . " " . displayValue($last_name) . "</h1>" ; 
+        echo "<h1 class='text-center'>Welcome " . ($first_name !== "Tidak teridentifikasi" ? $first_name : "<em>Tidak teridentifikasi</em>") . " " . ($last_name !== "Tidak teridentifikasi" ? $last_name : "<em>Tidak teridentifikasi</em>") . "</h1>" ; 
         echo "<br>";
-        echo "Gender: " . displayValue($gender);
+        echo "Gender: " . ($gender !== "Tidak teridentifikasi" ? $gender : "<em>Tidak teridentifikasi</em>");
         echo "<br>";
-        echo "Nationality: " . displayValue($country);
+        echo "Nationality: " . ($country !== "Tidak teridentifikasi" ? $country : "<em>Tidak teridentifikasi</em>");
         echo "<br>";
-        echo "Language Spoken: " . (is_array($languages) ? implode(", ", $languages) : displayValue($languages));
+        echo "Language Spoken: " . (is_array($languages) ? implode(", ", $languages) : ($languages !== "Tidak teridentifikasi" ? $languages : "<em>Tidak teridentifikasi</em>"));
         echo "<br>";
         echo "Bio: $bio";
       ?>
