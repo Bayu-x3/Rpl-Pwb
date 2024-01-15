@@ -10,12 +10,12 @@
   <div class="container d-flex justify-content-center align-items-center vh-100">
     <div class="card p-4">
       <?php
-        $first_name = $_POST['first'];
-        $last_name = $_POST['last'];
-        $gender = $_POST['gender'];
-        $country = $_POST['country'];
-        $languages = $_POST['language'];
-        $bio = $_POST['bio'];
+        $first_name = htmlspecialchars($_POST['first']);
+        $last_name = htmlspecialchars($_POST['last']);
+        $gender = htmlspecialchars($_POST['gender']);
+        $country = htmlspecialchars($_POST['country']);
+        $languages = htmlspecialchars($_POST['language']);
+        $bio = htmlspecialchars($_POST['bio']);
 
         echo "<h1 class='text-center'>Welcome " . ($first_name !== "Tidak teridentifikasi" ? $first_name : "<em>Tidak teridentifikasi</em>") . " " . ($last_name !== "Tidak teridentifikasi" ? $last_name : "<em>Tidak teridentifikasi</em>") . "</h1>" ; 
         echo "<br>";
