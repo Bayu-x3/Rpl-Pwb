@@ -1,14 +1,14 @@
 <?php
-require_once "animal.php";
-require_once "frog.php";
-require_once "ape.php";
+include "animal.php";
+include "frog.php";
+include "ape.php";
 
 $sheep = new Animal("shaun", 4, "NO");
 echo "Nama: ". $sheep->name . "<br>";
 echo "Kaki: " . $sheep->legs . "<br>";
 echo "Status Darah: " . $sheep->cold_blooded . "<br>";
 
-echo "<br>";
+echo "<br><br>";
 
 $sungokong = new Frog("Buduk");
 echo "Nama: ". $sungokong->name . "<br>";
