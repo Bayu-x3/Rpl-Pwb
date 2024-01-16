@@ -10,19 +10,19 @@ echo "Status Darah: " . $sheep->cold_blooded . "<br>";
 
 echo "<br><br>";
 
-$sungokong = new Frog("Buduk");
-echo "Nama: ". $sungokong->name . "<br>";
-echo "Kaki: " . $sungokong->legs . "<br>";
-echo "Status Darah: " . $sungokong->cold_blooded . "<br>";
-echo "Jump: ";
-$sungokong->jump();
-
-echo "<br><br>";
-
-$kodok = new Ape("keraSakti");
+$kodok = new Frog("Buduk");
 echo "Nama: ". $kodok->name . "<br>";
 echo "Kaki: " . $kodok->legs . "<br>";
 echo "Status Darah: " . $kodok->cold_blooded . "<br>";
+echo "Jump: ";
+$kodok->jump();
+
+echo "<br><br>";
+
+$sungokong = new Ape("keraSakti");
+echo "Nama: ". $sungokong->name . "<br>";
+echo "Kaki: " . $sungokong->legs . "<br>";
+echo "Status Darah: " . $sungokong->cold_blooded . "<br>";
 echo "Yell : ";
-$kodok->yell();
+$sungokong->yell();
 ?>
